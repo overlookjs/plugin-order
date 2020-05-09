@@ -10,5 +10,5 @@ import orderPlugin from '../lib/index.js';
 
 export default orderPlugin;
 export const {
-	TEMP
+	ORDER
 } = orderPlugin;
