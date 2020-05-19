@@ -22,8 +22,6 @@ describe('Plugin', () => { // eslint-disable-line jest/lowercase-name
 
 	it('when passed to `Route.extend()`, returns subclass of Route', () => {
 		const OrderRoute = Route.extend(orderPlugin);
-		expect(OrderRoute).toBeFunction();
-		expect(Object.getPrototypeOf(OrderRoute)).toBe(Route);
-		expect(Object.getPrototypeOf(OrderRoute.prototype)).toBe(Route.prototype);
+		expect(OrderRoute).toBeDirectSubclassOf(Route);
 	});
 });
